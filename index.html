@@ -8,10 +8,23 @@
 	<link rel="stylesheet" href="./styles/normalize.css">
 	<link rel="stylesheet" href="./styles/style.css">
 	<link type="image/x-icon" href="./img/viget1.svg" rel="shortcut icon">
-	<link rel="stylesheet" href="./sripts/index.js">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 	<title>Travel</title>
 </head>
 <body>
+	<div class="menu__popup" id="popup">
+		<div class="menu__popup_close">
+			<img id="close" src="./img/popup_cross.svg" alt="close">
+		</div>
+		<ul class="menu__popup_ul">
+			<li><a href="#preview">How It Works</a></li>
+			<li><a href="#steps">Plan Your Trip</a></li>
+			<li><a href="#destinations">Destinations</a></li>
+			<li><a href="#storyes">Travel Stories</a></li>
+			<li><a href="#">Account</a></li>
+			<li><a href="#social_media">Social Media</a></li>
+		</ul>
+	</div>
 	<div class="wrapper">
 		<header class="header">
 			<div class="_container header__container">
@@ -31,6 +44,22 @@
 			</div>
 		</header>
 		<main class="main">
+			<div class="preview__mobile" id="preview">
+				<div class="preview__mobile_header _container">
+					<div class="preview__mobile_header_logo">
+						<img src="./img/logo.svg" alt="logo">
+					</div>
+					<div class="preview__mobile_header_menu">
+						<img  id="mobile__menu_button" src="./img/burger_icon.svg" alt="menu">
+					</div>
+				</div>
+				<div class="preview__form _container">
+					<form action="#">
+						<input class="preview__form__inp" placeholder="What would you like to do?" type="search">
+						<button class="preview__form__button">Start Planning</button>
+					</form>	
+				</div>
+			</div>
 	<section class="preview">
 		<div class="_container preview__container" id="preview">
 			<h1>Explore the beauty of the World</h1>
@@ -47,15 +76,15 @@
 		<div class="_container steps__container" id="steps">
 			<h2>3 STEPS TO THE PERFECT TRIP</h2>
 			<div class="steps__items">
-				<div class="steps__item">
+				<div class="steps__item item_1">
 					<img src="./img/icon1.svg" alt="icon">
 					<p>Tell us what you want to do</p>
 				</div>
-				<div class="steps__item">
+				<div class="steps__item item_2">
 					<img src="./img/icon2.svg" alt="icon">
-					<p>Share us preferable dates </p>
+					<p>Share us preferable dates</p>
 				</div>
-				<div class="steps__item">
+				<div class="steps__item item_3">
 					<img src="./img/icon3.svg" alt="icon">
 					<p>We will give you recommendations</p>
 				</div>
@@ -63,18 +92,26 @@
 		</div>
 	</section>
 	<section class="destinations">
-		<div class="destinations__container" id="destinations">
+		<div class="swiper-container destinations__container" id="destinations">
 			<h2>POPULAR DESTINATIONS</h2>
-			<div class="destinations__photos">
-				<img src="./img/Destination1.jpg" alt="photo">
-				<img src="./img/Destination2.jpg" alt="photo">
-				<img src="./img/Destination3.jpg" alt="photo">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide destination_slide_1">
+					<div class="image_1 slide_image">
+						<p class="slide_image_title">SPAIN</p>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="image_2 slide_image">
+						<p class="slide_image_title">JAPAN</p>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="image_3 slide_image">
+						<p class="slide_image_title">USA</p>
+					</div>
+				</div>
 			</div>
-			<div class="destinations__viget">
-				<img src="./img/viget1.svg" alt="viget">
-				<img src="./img/viiget2.svg" alt="viget">
-				<img src="./img/viget1.svg" alt="viget">
-			</div>
+			<div class="swiper-pagination"></div>
 			<button class="destinations__button">
 				<img src="./img/bi_arrow-right.svg" alt="arrow">
 				Find More
@@ -84,7 +121,7 @@
 	<section class="stories">
 		<h2>TRAVEL STORIES</h2>
 		<div class="stories__desk" id="storyes">
-			<div class="stories__container _container">
+			<div class="stories__container">
 				<div class="stories__item">
 					<div class="stories__img">
 						<img src="./img/story1.jpg" alt="photo">
@@ -143,7 +180,6 @@
 					See More
 				</button>
 			</div>
-			<div class="stories__desk_white"></div>
 		</div>
 	</section>
 		</main>
@@ -162,5 +198,7 @@
 			</div>
 		</footer>
 	</div>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+	<script src="./sripts/index.js"></script>
 </body>
 </html>
