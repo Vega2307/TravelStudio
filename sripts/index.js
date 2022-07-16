@@ -16,12 +16,14 @@ new Swiper('.swiper-container'  , {
 
 const humb = document.querySelector("#mobile__menu_button");
 const popup = document.querySelector("#popup");
+const li = document.querySelector('.menu__popup_ul');
 
 humb.addEventListener("click", humbHandler);
 
 function humbHandler(e) {
     e.preventDefault();
     popup.classList.toggle("open");
+    popup.classList.remove("close");
 }
 
 const close = document.querySelector("#close");
@@ -31,4 +33,11 @@ close.addEventListener("click", closeHandler);
 function closeHandler(e) {
     e.preventDefault();
     popup.classList.toggle("close");
+    popup.classList.remove("open");
+}
+
+li.onclick = clickOnLi;
+function clickOnLi() {
+    popup.classList.add('close')
+    popup.classList.remove('open');
 }

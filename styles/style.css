@@ -17,7 +17,6 @@ body {
     margin-left: auto;
     position: fixed;
     top: 0;
-    right: -50%;
     z-index: 10;
     transition: 0.3s;
 }
@@ -52,6 +51,11 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+}
+.nav_back_opacity {
+    opacity: 0.5;
+    z-index: 1;
+    background-color: black;
 }
 a {
     text-decoration: none;
