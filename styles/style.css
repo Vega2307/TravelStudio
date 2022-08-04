@@ -385,9 +385,23 @@ h1 {
         max-width: 55vw;
         max-height: 55vw;
     }
-}    
+}
+@media (max-width: 490px){
+    .slide_image {
+        max-width: 92.4vw;
+        margin-left: 15px;
+        font-size: 20px;
+        align-items: flex-start;
+    }
+}      
 .image_1 {
     background-image: url(../img/destination_photo1.jpg);
+}
+@media (max-width: 490px){
+    .image_1 {
+        background-image: url(../img/mobile_bcg_1.jpg);
+        background-size: cover;
+    }
 }
 .image_2 {
     background-image: url(../img/destination_photo2.jpg);
@@ -397,14 +411,26 @@ h1 {
 }
 .swiper-pagination {
     height: 20px;
-    position: static !important;
+    position: relative !important;
     margin-top: 24px;
     margin-bottom: 40px;
+}
+@media (max-width: 490px){
+    .swiper-pagination {
+        margin-top: -15px;
+        margin-bottom: 25px;
+    }
 }
 .swiper-pagination-bullet {
     width: 20px !important;
     height: 20px !important;
     background-color: #F2785C !important;
+}
+@media (max-width: 490px){
+    .swiper-pagination-bullet {
+        height: 2vw !important;
+        width: 2vw !important;
+    }
 }
 .destinations__button {
     display: flex;
@@ -429,6 +455,7 @@ h1 {
         line-height: 14.55px;
         margin-right: auto;
         margin-left: auto;
+        margin-bottom: 20px;
     }
 }
 @media(max-width: 648px){
