@@ -1,2 +1,2 @@
 # Travel
- https://vega2307.github.io/my_project_TravelStudio/
+ https://vega2307.github.io/TravelStudio/
